@@ -97,6 +97,41 @@ const actions = {
             // Giving the wheel back to our bot
             return Promise.resolve()
         }
+    },
+    getPnrStatus({context, entities}) {
+
+        return new Promise(function(resolve, reject) {
+
+           var pnr= entities.pnr[0].value;
+           console.log("PNR============>",pnr);
+            request('http://api.railwayapi.com/pnr_status/pnr/1234567890/apikey/7qv3y07t/', function (error, response, body) {
+               
+               
+                if(error) {   
+                    context.PnrStatus = "Sorry! something went wrong";
+                    return resolve(context);
+                }
+                if (!error && response.statusCode == 200) {
+                      context.PnrStatus = response.train_name;
+                    return resolve(context);
+                }
+               else if (!error && response.statusCode == 410) {
+                      context.PnrStatus = "Flushed PNR / PNR not yet generated";
+                    return resolve(context);
+                }
+               else if (!error && response.statusCode == 404) {
+                      context.PnrStatus = "Service Down / Source not responding";
+                    return resolve(context);
+                }
+
+                
+            
+            });
+
+
+        });
+        
+
     }
    
 };
