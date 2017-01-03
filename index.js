@@ -102,8 +102,8 @@ const actions = {
 
         return new Promise(function(resolve, reject) {
 
-           var pnr= entities.pnr[0].value;
-           console.log("PNR============>",pnr);
+           //var pnr= entities.pnr[0].value;
+           console.log("PNR============>",entities);
             request('http://api.railwayapi.com/pnr_status/pnr/1234567890/apikey/7qv3y07t/', function (error, response, body) {
                
                
