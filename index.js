@@ -112,7 +112,7 @@ const actions = {
                     return resolve(context);
                 }
                 if (!error && response.statusCode == 200) {
-                      context.PnrStatus = response.train_name;
+                      context.PnrStatus = body.train_name;
                     return resolve(context);
                 }
                else if (!error && response.statusCode == 410) {
