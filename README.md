@@ -1,4 +1,4 @@
-# Wit-Facebook
+# Indian-Rail-Facebook-chatbot using WIT ai
 Wit.ai and Facebook Messenger Integration using IRCTC APIs
 ## Initial Installation
 Fork this repository and clone.
@@ -69,7 +69,7 @@ git push heroku master
 
 * Select "Setup Webhooks", and you will see callback URL and verify token. For the callback URL put your Hherokuapp URL + "/webhook". For example, my callback URL is https://irctcfbweb.herokuapp.com/webhook.
 
-* Type the Verify Token that you set in the Heruku app setting. If you haven't set, the default value is "rememeber_my_pass".
+* Type the Verify Token that you set in the Heruku app setting. If you haven't set, the default value is "just_do_it".
 
 * Click all items in the Subscription Fields.
 
