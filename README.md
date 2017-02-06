@@ -102,23 +102,6 @@ curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<P
  npm test
  ```
 
-### Bot testing
- ```bash
- $WIT_TOKEN=insert_token_here node bot
- ```
-
-### Server testing
-First, run the server
-```bash
- $WIT_TOKEN=insert_token_here node index
- ```
- In other shell, fire this command:
- ```bash
- $curl -X POST -H "Content-Type: application/json" -d @__tests__/msg.json http://localhost:8445/webhook
-```
-
-
-The USER_ID error is OK, but make sure the bot response well.
 
 ## Contribution
-We welcome your comments and PRs!
+We welcome your comments.
