@@ -95,10 +95,6 @@ curl -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<P
 
 * Finally, go to the Facebook page you created/selected, and talk to your bot. Enjoy!
 
-![image](https://cloud.githubusercontent.com/assets/901975/14750786/20ddf0a4-08f9-11e6-9c9c-719d1020e5d8.png)
-
-![image](https://cloud.githubusercontent.com/assets/901975/14751164/2a485e2a-08fb-11e6-9a98-fd79bb0773f7.png)
-
 ## Testing
 
 ### Jest
